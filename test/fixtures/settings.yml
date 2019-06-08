@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tfl: false
+  youtube: false
+  weather: false
+  user_id: 1
+
+two:
+  tfl: false
+  youtube: false
+  weather: false
+  user_id: 1
