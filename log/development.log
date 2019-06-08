@@ -9726,3 +9726,14 @@ Started GET "/cable/" [WebSocket] for 93.115.194.171 at 2019-06-08 18:40:41 +010
 Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
 UpdateChannel is transmitting the subscription confirmation
 UpdateChannel is streaming from update_channel
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE DATABASE "mirror_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "mirror_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/cable" for 93.115.194.171 at 2019-06-08 20:03:31 +0100
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cable/" [WebSocket] for 93.115.194.171 at 2019-06-08 20:03:31 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+UpdateChannel is transmitting the subscription confirmation
+UpdateChannel is streaming from update_channel
