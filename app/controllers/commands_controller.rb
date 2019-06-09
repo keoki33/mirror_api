@@ -23,7 +23,7 @@ class CommandsController < ApplicationController
         "items": [
           {
             "simpleResponse": {
-              "textToSpeech": "as you wish"
+              "textToSpeech": params["queryResult"]["fulfillmentText"]
             }
           }
         ]
@@ -37,17 +37,21 @@ class CommandsController < ApplicationController
     #   @command = Command.create(score: params["queryResult"]["parameters"]["number"], game: "test", player_id: 1, name: "keo")
       
     puts "/////////////////////////////////////////"
-    puts params["queryResult"]["parameters"]
+    puts params
       puts "/////////////////////////////////////////"
     puts params["queryResult"]["parameters"].keys
         puts "/////////////////////////////////////////"
     puts params["queryResult"]["parameters"].values
+    puts "/////////////////////////////////////////"
+    puts params["queryResult"]["fulfillmentText"]
+
     @command = Command.create(key: params["queryResult"]["parameters"].keys[0], value: params["queryResult"]["parameters"].values[0], user_id:1)
     render json: @response.to_json
     puts @command.key
     ActionCable.server.broadcast 'update_channel',
    {key: @command.key,
-    value: @command.value}
+    value: @command.value,
+  command: params}
     
     
     
