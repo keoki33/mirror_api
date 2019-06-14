@@ -24,5 +24,12 @@ class UsersController < ApplicationController
   end
 
 
+  def email
+# puts params
+@message = params
+UserNotifierMailer.send_signup_email(@message).deliver
+  end
+
+
 
 end

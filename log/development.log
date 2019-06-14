@@ -12525,3 +12525,1577 @@ Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 2.3ms)
 
 
 UpdateChannel transmitting {"key"=>"on", "value"=>"true", "command"=>{"responseId"=>"8c016688-f156-47b2-83ae-0505f3a9c5fb-2dd8e723", "queryResult"=>{"queryText"=>"good morning", "action"=>"input.welcome", "parameters"=>{"on"=>"true"}, "allRequiredParamsPresent"=>true, "fulfillmentText"=>"Good Morning", "fulfillmentMessages... (via streamed from update_channel)
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE DATABASE "mirror_api_development" ENCODING = 'unicode'[0m
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "mirror_api_test" ENCODING = 'unicode'[0m
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2849849502108670635)[0m
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (4.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2849849502108670635)[0m
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/" for ::1 at 2019-06-13 17:26:15 +0100
+  [1m[35m (44.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (5.9ms)
+Completed 200 OK in 21ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/email" for ::1 at 2019-06-13 17:26:22 +0100
+Processing by UsersController#email as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/email/red" for ::1 at 2019-06-13 17:26:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/email/red"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/email" for ::1 at 2019-06-13 17:27:53 +0100
+Processing by UsersController#email as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-13 17:28:07 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/email" for ::1 at 2019-06-13 17:28:15 +0100
+Processing by UsersController#email as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-13 17:35:24 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 17:37:03 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:37:03 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/email"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [POST] "/email"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/email" for ::1 at 2019-06-13 17:37:48 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:37:48 +0100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/email"):
+  
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/email"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/email" for ::1 at 2019-06-13 17:38:58 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:38:58 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/email"):
+  [1m[35m (12.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [POST] "/email"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-06-13 17:40:24 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (8.8ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-13 17:40:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2019-06-13 17:40:28 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 70ms (Views: 4.4ms | ActiveRecord: 43.9ms)
+
+
+Started GET "/emails" for ::1 at 2019-06-13 17:40:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/emails"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/email" for ::1 at 2019-06-13 17:40:53 +0100
+Processing by UsersController#email as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-13 17:40:57 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.9ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/email" for ::1 at 2019-06-13 17:41:04 +0100
+Processing by UsersController#email as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 17:43:44 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:43:44 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/2019/06/13/middleeast/iran-gulf-of-oman-attacks-analysis-intl/index.html", "email"=>"", "user"=>{"url"=>"https://www.cnn.com/2019/06/13/middleeast/iran-gulf-of-oman-attacks-analysis-intl/index.html", "email"=>""}}
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/2019/06/13/middleeast/iran-gulf-of-oman-attacks-analysis-intl/index.html", "email"=>"", "user"=>{}}
+Completed 204 No Content in 0ms (ActiveRecord: 33.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 17:46:21 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:46:21 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/2019/06/13/middleeast/iran-gulf-of-oman-attacks-analysis-intl/index.html", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/2019/06/13/middleeast/iran-gulf-of-oman-attacks-analysis-intl/index.html", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 17:48:56 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:48:56 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/2019/06/13/middleeast/iran-gulf-of-oman-attacks-analysis-intl/index.html", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/2019/06/13/middleeast/iran-gulf-of-oman-attacks-analysis-intl/index.html", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 17:49:24 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:49:24 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cbsnews.com/news/house-holds-hearing-on-deepfakes-and-artificial-intelligence-amid-national-security-concerns-live-stream/", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cbsnews.com/news/house-holds-hearing-on-deepfakes-and-artificial-intelligence-amid-national-security-concerns-live-stream/", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 17:51:28 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:51:28 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.aol.com/article/news/2019/06/13/two-oil-tankers-struck-in-suspected-attacks-in-gulf-of-oman-shipping-firms/23748700/", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{"url"=>"https://www.aol.com/article/news/2019/06/13/two-oil-tankers-struck-in-suspected-attacks-in-gulf-of-oman-shipping-firms/23748700/", "email"=>"georgewmail-mirror@yahoo.com"}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 2.3ms
+Completed 500 Internal Server Error in 400ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `email' for #<ActionController::Parameters:0x00007f915b48a5a0>):
+  
+app/mailers/user_notifier_mailer.rb:6:in `send_signup_email'
+app/controllers/users_controller.rb:31:in `email'
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.aol.com/article/news/2019/06/13/two-oil-tankers-struck-in-suspected-attacks-in-gulf-of-oman-shipping-firms/23748700/", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 1.4ms
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 501.3ms)
+
+
+  
+NoMethodError (undefined method `email' for #<ActionController::Parameters:0x00007f915a16ab50>):
+  
+app/mailers/user_notifier_mailer.rb:6:in `send_signup_email'
+app/controllers/users_controller.rb:31:in `email'
+Started POST "/email" for ::1 at 2019-06-13 17:53:49 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:53:49 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/us/live-news/memphis-unrest-officer-shooting/index.html", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{"url"=>"https://www.cnn.com/us/live-news/memphis-unrest-officer-shooting/index.html", "email"=>"georgewmail-mirror@yahoo.com"}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 0.5ms
+Completed 204 No Content in 174ms (ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/us/live-news/memphis-unrest-officer-shooting/index.html", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 0.1ms
+Completed 204 No Content in 0ms (ActiveRecord: 179.8ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 17:55:20 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:55:20 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.foxnews.com/politics/hannity-praises-trumps-comments-about-listening-to-foreign-government-genius-set-up-for-dems", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 0.9ms
+Completed 204 No Content in 16ms (ActiveRecord: 11.2ms)
+
+
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.foxnews.com/politics/hannity-praises-trumps-comments-about-listening-to-foreign-government-genius-set-up-for-dems", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 0.2ms
+Completed 204 No Content in 12ms (ActiveRecord: 4.6ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 17:57:17 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:57:17 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{"url"=>"https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz", "email"=>"georgewmail-mirror@yahoo.com"}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 7.8ms
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `email' for #<ActionController::Parameters:0x00007fab82ca0528>):
+  
+app/mailers/user_notifier_mailer.rb:7:in `send_signup_email'
+app/controllers/users_controller.rb:31:in `email'
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 1.7ms
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 117.4ms)
+
+
+  
+NoMethodError (undefined method `email' for #<ActionController::Parameters:0x00007fab82be45f8>):
+  
+app/mailers/user_notifier_mailer.rb:7:in `send_signup_email'
+app/controllers/users_controller.rb:31:in `email'
+Started POST "/email" for ::1 at 2019-06-13 17:58:18 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:58:18 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.npr.org/2019/06/13/731629018/as-legal-battle-persists-census-citizenship-question-is-put-to-the-test", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{"url"=>"https://www.npr.org/2019/06/13/731629018/as-legal-battle-persists-census-citizenship-question-is-put-to-the-test", "email"=>"georgewmail-mirror@yahoo.com"}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 1.6ms
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `email' for #<ActionController::Parameters:0x00007fab82bdaa80>):
+  
+app/mailers/user_notifier_mailer.rb:7:in `send_signup_email'
+app/controllers/users_controller.rb:31:in `email'
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.npr.org/2019/06/13/731629018/as-legal-battle-persists-census-citizenship-question-is-put-to-the-test", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 1.9ms
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 112.3ms)
+
+
+  
+NoMethodError (undefined method `email' for #<ActionController::Parameters:0x00007fab81fbab10>):
+  
+app/mailers/user_notifier_mailer.rb:7:in `send_signup_email'
+app/controllers/users_controller.rb:31:in `email'
+Started POST "/email" for ::1 at 2019-06-13 17:58:55 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:58:55 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/2019/06/13/middleeast/iran-gulf-of-oman-attacks-analysis-intl/index.html", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{"url"=>"https://www.cnn.com/2019/06/13/middleeast/iran-gulf-of-oman-attacks-analysis-intl/index.html", "email"=>"georgewmail-mirror@yahoo.com"}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 1.3ms
+Completed 204 No Content in 41ms (ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/2019/06/13/middleeast/iran-gulf-of-oman-attacks-analysis-intl/index.html", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 0.3ms
+Completed 204 No Content in 1ms (ActiveRecord: 46.4ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 17:59:19 +0100
+Started POST "/email" for ::1 at 2019-06-13 17:59:19 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cbsnews.com/news/house-holds-hearing-on-deepfakes-and-artificial-intelligence-amid-national-security-concerns-live-stream/", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 0.5ms
+Completed 204 No Content in 10ms (ActiveRecord: 12.8ms)
+
+
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cbsnews.com/news/house-holds-hearing-on-deepfakes-and-artificial-intelligence-amid-national-security-concerns-live-stream/", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 0.2ms
+Completed 204 No Content in 15ms (ActiveRecord: 5.2ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 18:00:25 +0100
+Started POST "/email" for ::1 at 2019-06-13 18:00:26 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/us/live-news/memphis-unrest-officer-shooting/index.html", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 9.6ms
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 4.1ms)
+
+
+  
+ActionView::MissingTemplate (Missing template user_notifier_mailer/send_signup_email with "mailer". Searched in:
+  * "user_notifier_mailer"
+):
+  
+app/mailers/user_notifier_mailer.rb:9:in `send_signup_email'
+app/controllers/users_controller.rb:31:in `email'
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cnn.com/us/live-news/memphis-unrest-officer-shooting/index.html", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+UserNotifierMailer#send_signup_email: processed outbound mail in 4.2ms
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template user_notifier_mailer/send_signup_email with "mailer". Searched in:
+  * "user_notifier_mailer"
+):
+  
+app/mailers/user_notifier_mailer.rb:9:in `send_signup_email'
+app/controllers/users_controller.rb:31:in `email'
+Started POST "/email" for ::1 at 2019-06-13 18:03:02 +0100
+Started POST "/email" for ::1 at 2019-06-13 18:03:02 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (3.6ms)
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (0.1ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 790.9ms
+UserNotifierMailer#send_signup_email: processed outbound mail in 808.9ms
+Sent mail to georgewmail-mirror@yahoo.com (71.9ms)
+Date: Thu, 13 Jun 2019 18:03:03 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d0281c7802d3_f0693fd5c14e63f4809d2@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126!</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Sent mail to georgewmail-mirror@yahoo.com (71.1ms)
+Date: Thu, 13 Jun 2019 18:03:03 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d0281c780e11_f0693fd5c14e653481073@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126!</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 883ms (ActiveRecord: 0.0ms)
+
+
+Completed 204 No Content in 867ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 18:06:05 +0100
+Started POST "/email" for ::1 at 2019-06-13 18:06:05 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (80.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cbsnews.com/news/house-holds-hearing-on-deepfakes-and-artificial-intelligence-amid-national-security-concerns-live-stream/", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{"url"=>"https://www.cbsnews.com/news/house-holds-hearing-on-deepfakes-and-artificial-intelligence-amid-national-security-concerns-live-stream/", "email"=>"georgewmail-mirror@yahoo.com"}}
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.cbsnews.com/news/house-holds-hearing-on-deepfakes-and-artificial-intelligence-amid-national-security-concerns-live-stream/", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (8.0ms)
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (0.1ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 85.1ms
+UserNotifierMailer#send_signup_email: processed outbound mail in 78.4ms
+Sent mail to georgewmail-mirror@yahoo.com (771.7ms)
+Sent mail to georgewmail-mirror@yahoo.com (751.3ms)
+Date: Thu, 13 Jun 2019 18:06:05 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d02827db8dae_f18d3ff30f2a2b907853f@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link https://www.cbsnews.com/news/house-holds-hearing-on-deepfakes-and-artificial-intelligence-amid-national-security-concerns-live-stream/!</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Date: Thu, 13 Jun 2019 18:06:05 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d02827dbb8fa_f18d3ff30f2a2988786b5@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link https://www.cbsnews.com/news/house-holds-hearing-on-deepfakes-and-artificial-intelligence-amid-national-security-concerns-live-stream/!</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 874ms (ActiveRecord: 0.0ms)
+
+
+Completed 204 No Content in 852ms (ActiveRecord: 17.8ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 18:09:48 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (9.2ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 49.4ms
+Started POST "/email" for ::1 at 2019-06-13 18:09:49 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (0.7ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 10.4ms
+Sent mail to georgewmail-mirror@yahoo.com (203.6ms)
+Date: Thu, 13 Jun 2019 18:09:49 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d02835d1b4dd_f18d3ff30f2a26f478898@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126!</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 248ms (ActiveRecord: 0.0ms)
+
+
+Sent mail to georgewmail-mirror@yahoo.com (327.4ms)
+Date: Thu, 13 Jun 2019 18:09:49 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d02835d9863_f18d3ff30f2a285c787bd@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126!</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 388ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 18:10:51 +0100
+Started POST "/email" for ::1 at 2019-06-13 18:10:51 +0100
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (74.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{"url"=>"https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz", "email"=>"georgewmail-mirror@yahoo.com"}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (5.2ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 82.5ms
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"http://fortune.com/2019/06/13/japanese-oil-tanker-attack/", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (0.2ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 10.1ms
+Sent mail to georgewmail-mirror@yahoo.com (243.3ms)
+Date: Thu, 13 Jun 2019 18:10:51 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d02839bc65a7_f2023fd58b924b4018cc@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz!</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 347ms (ActiveRecord: 0.0ms)
+
+
+Sent mail to georgewmail-mirror@yahoo.com (231.3ms)
+Date: Thu, 13 Jun 2019 18:10:51 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d02839bcaf28_f2023fd58b92494c1948@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link http://fortune.com/2019/06/13/japanese-oil-tanker-attack/!</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 243ms (ActiveRecord: 115.6ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 18:12:03 +0100
+Started POST "/email" for ::1 at 2019-06-13 18:12:03 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.foxnews.com/politics/hannity-praises-trumps-comments-about-listening-to-foreign-government-genius-set-up-for-dems", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{"url"=>"https://www.foxnews.com/politics/hannity-praises-trumps-comments-about-listening-to-foreign-government-genius-set-up-for-dems", "email"=>"georgewmail-mirror@yahoo.com"}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (2.1ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 71.9ms
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.foxnews.com/politics/hannity-praises-trumps-comments-about-listening-to-foreign-government-genius-set-up-for-dems", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (0.1ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 8.2ms
+Sent mail to georgewmail-mirror@yahoo.com (276.6ms)
+Date: Thu, 13 Jun 2019 18:12:03 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d0283e3db84e_f2463fec8dd17db0228d5@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link to the news article: </h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 366ms (ActiveRecord: 0.0ms)
+
+
+Sent mail to georgewmail-mirror@yahoo.com (725.9ms)
+Date: Thu, 13 Jun 2019 18:12:03 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d0283e3e0053_f2463fec8dd17ec8229cf@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link to the news article: </h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 736ms (ActiveRecord: 100.6ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 18:12:58 +0100
+Started POST "/email" for ::1 at 2019-06-13 18:12:58 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (1.1ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 11.3ms
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (0.2ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 11.2ms
+Sent mail to georgewmail-mirror@yahoo.com (207.2ms)
+Date: Thu, 13 Jun 2019 18:12:58 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d02841ad987c_f2463fec8dd17ce8230ac@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link to the article: https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 220ms (ActiveRecord: 0.0ms)
+
+
+Sent mail to georgewmail-mirror@yahoo.com (223.9ms)
+Date: Thu, 13 Jun 2019 18:12:58 +0100
+From: from@example.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d02841ae30a0_f2463fec8dd17b082314e@Flatirons-CSS-Guru.local.mail>
+Subject: Thanks for signing up for our amazing app
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link to the article: https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 236ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 18:32:11 +0100
+Started POST "/email" for ::1 at 2019-06-13 18:32:11 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{"url"=>"https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126", "email"=>"georgewmail-mirror@yahoo.com"}}
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (2.0ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 61.1ms
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (0.1ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 65.3ms
+Sent mail to georgewmail-mirror@yahoo.com (90.0ms)
+Date: Thu, 13 Jun 2019 18:32:11 +0100
+From: Your Magic Mirror
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d02889b98985_f3463fc7e61b844030693@Flatirons-CSS-Guru.local.mail>
+Subject: The article you requested on your mirror
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link to the article: https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 178ms (ActiveRecord: 0.0ms)
+
+
+Sent mail to georgewmail-mirror@yahoo.com (470.9ms)
+Date: Thu, 13 Jun 2019 18:32:11 +0100
+From: Your Magic Mirror
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d02889b9a47e_f3463fc7e61b881430786@Flatirons-CSS-Guru.local.mail>
+Subject: The article you requested on your mirror
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link to the article: https://www.nbcnews.com/news/us-news/judge-refuses-dismiss-secret-service-agent-s-suit-alleging-he-n1017126</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 537ms (ActiveRecord: 26.4ms)
+
+
+Started POST "/email" for ::1 at 2019-06-13 18:36:34 +0100
+Started POST "/email" for ::1 at 2019-06-13 18:36:34 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{"url"=>"https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz", "email"=>"georgewmail-mirror@yahoo.com"}}
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz", "email"=>"georgewmail-mirror@yahoo.com", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (1.1ms)
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+UserNotifierMailer#send_signup_email: processed outbound mail in 81.4ms
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (0.1ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 76.6ms
+Sent mail to georgewmail-mirror@yahoo.com (252.9ms)
+Date: Thu, 13 Jun 2019 18:36:35 +0100
+From: YourMirror@mirror.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d0289a391c6_f3463fc7e61b8274308cb@Flatirons-CSS-Guru.local.mail>
+Subject: The article you requested on your mirror
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link to the article: https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 358ms (ActiveRecord: 0.0ms)
+
+
+Sent mail to georgewmail-mirror@yahoo.com (251.3ms)
+Date: Thu, 13 Jun 2019 18:36:35 +0100
+From: YourMirror@mirror.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d0289a3af36_f3463fc7e61b80bc30920@Flatirons-CSS-Guru.local.mail>
+Subject: The article you requested on your mirror
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Here is the link to the article: https://thehill.com/policy/international/448313-two-oil-tankers-attacked-near-strait-of-hormuz</h1>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 334ms (ActiveRecord: 28.5ms)
+
+
+Started GET "/" for ::1 at 2019-06-14 08:18:27 +0100
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (7.0ms)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-14 08:19:57 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.foxnews.com/politics/anita-hill-says-of-course-i-could-vote-for-biden-in-2020", "email"=>"georgewmail-mirror@yahoo.com", "imageurl"=>"https://static.foxnews.com/foxnews.com/content/uploads/2019/06/Hill-Biden_Getty.jpg", "headline"=>"Anita Hill says 'of course I could' vote for Joe Biden in 2020, despite bitter history", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (1.0ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 108.7ms
+Sent mail to georgewmail-mirror@yahoo.com (807.2ms)
+Date: Fri, 14 Jun 2019 08:19:58 +0100
+From: YourMirror@mirror.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d034a9e46de4_105583fee7c131780764e1@Flatirons-CSS-Guru.local.mail>
+Subject: The article you requested on your mirror
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+         <p>Hello from your mirror,
+  
+        Here is the article link you requested:
+
+          <link  href="https://www.foxnews.com/politics/anita-hill-says-of-course-i-could-vote-for-biden-in-2020"/>
+
+          
+            <h1>Anita Hill says &#39;of course I could&#39; vote for Joe Biden in 2020, despite bitter history</h1>
+
+          <img src="https://static.foxnews.com/foxnews.com/content/uploads/2019/06/Hill-Biden_Getty.jpg" />
+
+Regards,
+
+Your Mirror
+
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 1025ms (ActiveRecord: 31.5ms)
+
+
+Started POST "/email" for ::1 at 2019-06-14 08:23:39 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.businessinsider.com/walmart-costco-hundreds-of-companies-send-trump-tariff-letter-2019-6", "email"=>"georgewmail-mirror@yahoo.com", "imageurl"=>"https://amp.businessinsider.com/images/5d02a6fa6fc92005252a4244-2732-1366.jpg", "headline"=>"More than 600 companies including Walmart and Costco sent a letter to Trump begging him not to increase China tariffs", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (2.0ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 13.3ms
+Sent mail to georgewmail-mirror@yahoo.com (224.8ms)
+Date: Fri, 14 Jun 2019 08:23:39 +0100
+From: YourMirror@mirror.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d034b7b8079f_105583fee7c131adc765aa@Flatirons-CSS-Guru.local.mail>
+Subject: The article you requested on your mirror
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+         <p>
+         
+         Hello from your mirror,
+  
+        Here is the article link you requested:
+
+        https://www.businessinsider.com/walmart-costco-hundreds-of-companies-send-trump-tariff-letter-2019-6
+
+        <br>
+        <br>
+
+
+          
+            <h1>More than 600 companies including Walmart and Costco sent a letter to Trump begging him not to increase China tariffs</h1>
+        <br>
+          <img src="https://amp.businessinsider.com/images/5d02a6fa6fc92005252a4244-2732-1366.jpg" />
+
+
+          <br>
+          <br>
+
+Regards,
+
+Your Mirror
+
+        </p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 254ms (ActiveRecord: 3.8ms)
+
+
+Started POST "/email" for ::1 at 2019-06-14 08:33:31 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.foxnews.com/politics/anita-hill-says-of-course-i-could-vote-for-biden-in-2020", "email"=>"georgewmail-mirror@yahoo.com", "imageurl"=>"https://static.foxnews.com/foxnews.com/content/uploads/2019/06/Hill-Biden_Getty.jpg", "headline"=>"Anita Hill says 'of course I could' vote for Joe Biden in 2020, despite bitter history", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (3.5ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 129.1ms
+Sent mail to georgewmail-mirror@yahoo.com (97.0ms)
+Date: Fri, 14 Jun 2019 08:33:31 +0100
+From: YourMirror@mirror.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d034dcbd1dc2_105583fee7c1319ec766c6@Flatirons-CSS-Guru.local.mail>
+Subject: The article you requested on your mirror
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+         <p>
+
+         Hello from your mirror,
+  
+        Here is the article link you requested:
+        <br>
+        <br>
+        <a href="https://www.foxnews.com/politics/anita-hill-says-of-course-i-could-vote-for-biden-in-2020">https://www.foxnews.com/politics/anita-hill-says-of-course-i-could-vote-for-biden-in-2020</a>
+        <br>
+        <br>
+            <h1>Anita Hill says &#39;of course I could&#39; vote for Joe Biden in 2020, despite bitter history</h1>
+        <br>
+          <img height="240" width="320" src="https://static.foxnews.com/foxnews.com/content/uploads/2019/06/Hill-Biden_Getty.jpg" />
+          <br>
+          <br>
+
+Regards,
+
+Your Mirror
+
+        </p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 234ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-14 08:35:08 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.washingtonexaminer.com/opinion/four-very-different-replacements-for-sarah-huckabee-sanders", "email"=>"georgewmail-mirror@yahoo.com", "imageurl"=>"https://mediadc.brightspotcdn.com/dims4/default/af3e6d0/2147483647/strip/true/crop/1500x788+0+106/resize/1200x630!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2Fab%2Fb4%2Fb57bef9bc2b489f25e4890403382%2Fbd7c3771705b5ff24ffa8b961a6b9087.jpg", "headline"=>"Four very different replacements for Sarah Huckabee Sanders", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (4.7ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 30.6ms
+Sent mail to georgewmail-mirror@yahoo.com (157.9ms)
+Date: Fri, 14 Jun 2019 08:35:08 +0100
+From: YourMirror@mirror.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d034e2c9846c_105583fee7c131910767ba@Flatirons-CSS-Guru.local.mail>
+Subject: The article you requested on your mirror
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+         <p>
+
+         Hello from your mirror,
+  
+        Here is the article link you requested:
+        <br>
+        <br>
+        <a href="https://www.washingtonexaminer.com/opinion/four-very-different-replacements-for-sarah-huckabee-sanders">https://www.washingtonexaminer.com/opinion/four-very-different-replacements-for-sarah-huckabee-sanders</a>
+        <br>
+        <br>
+            <h2>Four very different replacements for Sarah Huckabee Sanders</h2>
+        <br>
+          <img height="240" width="320" src="https://mediadc.brightspotcdn.com/dims4/default/af3e6d0/2147483647/strip/true/crop/1500x788+0+106/resize/1200x630!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2Fab%2Fb4%2Fb57bef9bc2b489f25e4890403382%2Fbd7c3771705b5ff24ffa8b961a6b9087.jpg" />
+          <br>
+          <br>
+
+Regards, <br>
+
+Your Mirror
+
+        </p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 198ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/email" for ::1 at 2019-06-14 08:36:09 +0100
+Processing by UsersController#email as */*
+  Parameters: {"url"=>"https://www.foxnews.com/politics/trump-appears-to-have-inadvertently-infused-democratic-investigations-after-abc-interview", "email"=>"georgewmail-mirror@yahoo.com", "imageurl"=>"https://media2.foxnews.com/BrightCove/694940094001/2019/06/14/694940094001_6048128242001_6048137165001-vs.jpg", "headline"=>"Trump appears to have inadvertently infused Democratic investigations after ABC interview", "user"=>{}}
+  Rendering user_notifier_mailer/send_signup_email.html.erb within layouts/mailer
+  Rendered user_notifier_mailer/send_signup_email.html.erb within layouts/mailer (1.1ms)
+UserNotifierMailer#send_signup_email: processed outbound mail in 13.5ms
+Sent mail to georgewmail-mirror@yahoo.com (217.7ms)
+Date: Fri, 14 Jun 2019 08:36:09 +0100
+From: YourMirror@mirror.com
+To: georgewmail-mirror@yahoo.com
+Message-ID: <5d034e69c9a82_105583fee7c13185c7685@Flatirons-CSS-Guru.local.mail>
+Subject: The article you requested on your mirror
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+         <p>
+
+         Hello from your mirror, 
+          <br>
+          <br>
+        Here is the article link you requested:
+        <br>
+        <br>
+        <a href="https://www.foxnews.com/politics/trump-appears-to-have-inadvertently-infused-democratic-investigations-after-abc-interview">https://www.foxnews.com/politics/trump-appears-to-have-inadvertently-infused-democratic-investigations-after-abc-interview</a>
+        <br>
+        <br>
+            <h2>Trump appears to have inadvertently infused Democratic investigations after ABC interview</h2>
+        <br>
+          <img height="240" width="320" src="https://media2.foxnews.com/BrightCove/694940094001/2019/06/14/694940094001_6048128242001_6048137165001-vs.jpg" />
+          <br>
+          <br>
+
+Regards, <br> <br>
+
+Your Mirror
+
+        </p>
+
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 204 No Content in 233ms (ActiveRecord: 0.0ms)
+
+

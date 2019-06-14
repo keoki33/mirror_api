@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+         <p>
+
+         Hello from your mirror, 
+          <br>
+          <br>
+        Here is the article link you requested:
+        <br>
+        <br>
+        <a href="<%= @message["url"] %>"><%= @message["url"] %></a>
+        <br>
+        <br>
+            <h2><%= @message["headline"] %></h2>
+        <br>
+          <img height="240" width="320" src="<%= @message["imageurl"] %>" />
+          <br>
+          <br>
+
+Regards, <br> <br>
+
+Your Mirror
+
+        </p>
+
+  </body>
+</html>
