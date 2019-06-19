@@ -14099,3 +14099,192 @@ Your Mirror
 Completed 204 No Content in 233ms (ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-06-17 16:27:33 +0100
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.8ms)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/commands" for ::1 at 2019-06-17 16:27:39 +0100
+Processing by CommandsController#index as HTML
+  [1m[36mCommand Load (11.9ms)[0m  [1m[34mSELECT "commands".* FROM "commands"[0m
+  ↳ app/controllers/commands_controller.rb:5
+Completed 200 OK in 123ms (Views: 4.0ms | ActiveRecord: 40.3ms)
+
+
+Started POST "/commands" for ::1 at 2019-06-17 16:38:02 +0100
+Processing by CommandsController#create as */*
+  Parameters: {"queryResult"=>{"parameters"=>{"key"=>"true"}}, "command"=>{}}
+  [1m[35m (24.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[36mCommand Create (49.7ms)[0m  [1m[32mINSERT INTO "commands" ("key", "value", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["key", "key"], ["value", "true"], ["user_id", 1], ["created_at", "2019-06-17 15:38:02.668277"], ["updated_at", "2019-06-17 15:38:02.668277"]]
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/commands_controller.rb:48
+[ActionCable] Broadcasting to update_channel: {:key=>"key", :value=>"true", :command=><ActionController::Parameters {"queryResult"=><ActionController::Parameters {"parameters"=><ActionController::Parameters {"key"=>"true"} permitted: false>} permitted: false>, "controller"=>"commands", "action"=>"create", "command"=>{}} permitted: false>}
+Completed 200 OK in 162ms (Views: 2.5ms | ActiveRecord: 75.7ms)
+
+
+Started GET "/" for ::1 at 2019-06-17 16:38:36 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.6.3/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (17.3ms)
+Completed 200 OK in 32ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/commands" for ::1 at 2019-06-17 16:38:42 +0100
+Processing by CommandsController#index as HTML
+  [1m[36mCommand Load (18.5ms)[0m  [1m[34mSELECT "commands".* FROM "commands"[0m
+  ↳ app/controllers/commands_controller.rb:5
+Completed 200 OK in 141ms (Views: 0.4ms | ActiveRecord: 18.5ms)
+
+
+Started POST "/commands" for ::1 at 2019-06-17 16:40:51 +0100
+Processing by CommandsController#create as */*
+  Parameters: {"queryResult"=>{"parameters"=>{"testkey"=>"testvalue"}}, "command"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[36mCommand Create (22.5ms)[0m  [1m[32mINSERT INTO "commands" ("key", "value", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["key", "testkey"], ["value", "testvalue"], ["user_id", 1], ["created_at", "2019-06-17 15:40:51.246839"], ["updated_at", "2019-06-17 15:40:51.246839"]]
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/commands_controller.rb:48
+[ActionCable] Broadcasting to update_channel: {:key=>"testkey", :value=>"testvalue", :command=><ActionController::Parameters {"queryResult"=><ActionController::Parameters {"parameters"=><ActionController::Parameters {"testkey"=>"testvalue"} permitted: false>} permitted: false>, "controller"=>"commands", "action"=>"create", "command"=>{}} permitted: false>}
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/commands" for ::1 at 2019-06-17 16:41:01 +0100
+Processing by CommandsController#index as HTML
+  [1m[36mCommand Load (1.1ms)[0m  [1m[34mSELECT "commands".* FROM "commands"[0m
+  ↳ app/controllers/commands_controller.rb:5
+Completed 200 OK in 205ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-06-17 16:41:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/commands" for ::1 at 2019-06-17 16:41:48 +0100
+Processing by CommandsController#create as */*
+  Parameters: {"queryResult"=>{"parameters"=>{"key"=>"true"}}, "command"=>{}}
+  [1m[35m (15.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[36mCommand Create (2.4ms)[0m  [1m[32mINSERT INTO "commands" ("key", "value", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["key", "key"], ["value", "true"], ["user_id", 1], ["created_at", "2019-06-17 15:41:48.467149"], ["updated_at", "2019-06-17 15:41:48.467149"]]
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/commands_controller.rb:48
+[ActionCable] Broadcasting to update_channel: {:key=>"key", :value=>"true", :command=><ActionController::Parameters {"queryResult"=><ActionController::Parameters {"parameters"=><ActionController::Parameters {"key"=>"true"} permitted: false>} permitted: false>, "controller"=>"commands", "action"=>"create", "command"=>{}} permitted: false>}
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/commands" for ::1 at 2019-06-17 16:42:07 +0100
+Processing by CommandsController#index as HTML
+  [1m[36mCommand Load (0.8ms)[0m  [1m[34mSELECT "commands".* FROM "commands"[0m
+  ↳ app/controllers/commands_controller.rb:5
+Completed 200 OK in 73ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/commands" for ::1 at 2019-06-17 16:42:54 +0100
+Processing by CommandsController#create as */*
+  Parameters: {"queryResult"=>{"parameters"=>{"x"=>"true"}}, "command"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[36mCommand Create (0.9ms)[0m  [1m[32mINSERT INTO "commands" ("key", "value", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["key", "x"], ["value", "true"], ["user_id", 1], ["created_at", "2019-06-17 15:42:54.973271"], ["updated_at", "2019-06-17 15:42:54.973271"]]
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/commands_controller.rb:48
+[ActionCable] Broadcasting to update_channel: {:key=>"x", :value=>"true", :command=><ActionController::Parameters {"queryResult"=><ActionController::Parameters {"parameters"=><ActionController::Parameters {"x"=>"true"} permitted: false>} permitted: false>, "controller"=>"commands", "action"=>"create", "command"=>{}} permitted: false>}
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/commands" for ::1 at 2019-06-17 16:43:19 +0100
+Processing by CommandsController#index as HTML
+  [1m[36mCommand Load (1.5ms)[0m  [1m[34mSELECT "commands".* FROM "commands"[0m
+  ↳ app/controllers/commands_controller.rb:5
+Completed 200 OK in 83ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/commands" for ::1 at 2019-06-17 16:44:29 +0100
+Processing by CommandsController#create as */*
+  Parameters: {"queryResult"=>{"parameters"=>{"value"=>"true"}}, "command"=>{}}
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[36mCommand Create (1.0ms)[0m  [1m[32mINSERT INTO "commands" ("key", "value", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["key", "value"], ["value", "true"], ["user_id", 1], ["created_at", "2019-06-17 15:44:29.795430"], ["updated_at", "2019-06-17 15:44:29.795430"]]
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/commands_controller.rb:48
+[ActionCable] Broadcasting to update_channel: {:key=>"value", :value=>"true", :command=><ActionController::Parameters {"queryResult"=><ActionController::Parameters {"parameters"=><ActionController::Parameters {"value"=>"true"} permitted: false>} permitted: false>, "controller"=>"commands", "action"=>"create", "command"=>{}} permitted: false>}
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/commands" for ::1 at 2019-06-17 16:44:33 +0100
+Processing by CommandsController#index as HTML
+  [1m[36mCommand Load (1.0ms)[0m  [1m[34mSELECT "commands".* FROM "commands"[0m
+  ↳ app/controllers/commands_controller.rb:5
+Completed 200 OK in 89ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/commands" for ::1 at 2019-06-17 16:47:25 +0100
+Processing by CommandsController#create as */*
+  Parameters: {"queryResult"=>{"parameters"=>{"x"=>"on"}}, "command"=>{}}
+  [1m[35m (10.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[36mCommand Create (0.8ms)[0m  [1m[32mINSERT INTO "commands" ("key", "value", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["key", "x"], ["value", "on"], ["user_id", 1], ["created_at", "2019-06-17 15:47:25.522635"], ["updated_at", "2019-06-17 15:47:25.522635"]]
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/commands_controller.rb:48
+[ActionCable] Broadcasting to update_channel: {:key=>"x", :value=>"on", :command=><ActionController::Parameters {"queryResult"=><ActionController::Parameters {"parameters"=><ActionController::Parameters {"x"=>"on"} permitted: false>} permitted: false>, "controller"=>"commands", "action"=>"create", "command"=>{}} permitted: false>}
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/commands" for ::1 at 2019-06-17 16:47:28 +0100
+Processing by CommandsController#index as HTML
+  [1m[36mCommand Load (0.9ms)[0m  [1m[34mSELECT "commands".* FROM "commands"[0m
+  ↳ app/controllers/commands_controller.rb:5
+Completed 200 OK in 67ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/commands" for ::1 at 2019-06-17 16:54:47 +0100
+Processing by CommandsController#create as */*
+  Parameters: {"queryResult"=>{"parameters"=>{"on"=>"true"}}, "command"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[36mCommand Create (1.9ms)[0m  [1m[32mINSERT INTO "commands" ("key", "value", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["key", "on"], ["value", "true"], ["user_id", 1], ["created_at", "2019-06-17 15:54:47.555775"], ["updated_at", "2019-06-17 15:54:47.555775"]]
+  ↳ app/controllers/commands_controller.rb:48
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/commands_controller.rb:48
+[ActionCable] Broadcasting to update_channel: {:key=>"on", :value=>"true", :command=><ActionController::Parameters {"queryResult"=><ActionController::Parameters {"parameters"=><ActionController::Parameters {"on"=>"true"} permitted: false>} permitted: false>, "controller"=>"commands", "action"=>"create", "command"=>{}} permitted: false>}
+Completed 200 OK in 18ms (Views: 1.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/commands" for ::1 at 2019-06-17 16:54:52 +0100
+Processing by CommandsController#index as HTML
+  [1m[36mCommand Load (2.6ms)[0m  [1m[34mSELECT "commands".* FROM "commands"[0m
+  ↳ app/controllers/commands_controller.rb:5
+Completed 200 OK in 139ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
