@@ -25,6 +25,22 @@ class CommandsController < ApplicationController
             "simpleResponse": {
               "textToSpeech": params["queryResult"]["fulfillmentText"]
             }
+          },
+          {
+            "mediaResponse": {
+              "mediaType": "AUDIO",
+              "mediaObjects": [
+                {
+                  "contentUrl": "https://github.com/keoki33/smart_mirror/raw/master/public/blank30.mp3",
+                  "description": "A funky Jazz tune",
+                  "icon": {
+                    "url": "https://storage.googleapis.com/automotive-media/album_art.jpg",
+                    "accessibilityText": "Album cover of an ccean view"
+                  },
+                  "name": "Jazz in Paris"
+                }
+              ]
+            }
           }
         ]
       }
